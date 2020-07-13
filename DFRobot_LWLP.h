@@ -1,6 +1,6 @@
 /*!
- * @file DFRobot_LWPS.h
- * @brief Define the infrastructure of the DFRobot_LWPS class
+ * @file DFRobot_LWLP.h
+ * @brief Define the infrastructure of the DFRobot_LWLP class
  * @n This is a library of ...
  * @copyright   Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
  * @licence     The MIT License (MIT)
@@ -8,11 +8,11 @@
  * @version  V1.0
  * @date  2020-05-26
  * @get from https://www.dfrobot.com
- * @url https://github.com/DFRobot/DFRobot_LWPS
+ * @url https://github.com/DFRobot/DFRobot_LWLP
  */
  
-#ifndef DFROBOT_LWPS_H
-#define DFROBOT_LWPS_H
+#ifndef DFROBOT_LWLP_H
+#define DFROBOT_LWLP_H
 #if ARDUINO >= 100
 #include "Arduino.h"
 #else
@@ -38,7 +38,7 @@
 
 
 
-class DFRobot_LWPS
+class DFRobot_LWLP
 {
 public:
   #define ERR_OK             0      //No error
@@ -66,14 +66,14 @@ public:
     double  temperatureFilterSum;/**<排序后累加>*/
     float  temperatureFilterResult;/**<滤波后最终值>*/
     float  presureDrift;
-  }sLwps_t ;
+  }sLwlp_t ;
   
   /*!
    * @brief Construct the function
    * @param pWire IC bus pointer object and construction device, can both pass or not pass parameters, Wire in default.
    * @param address Chip IIC address, two optional addresses 0x01 and 0x00(0x00 in default).
    */
-  DFRobot_LWPS(TwoWire *pWire = &Wire, uint8_t address = 0x00);
+  DFRobot_LWLP(TwoWire *pWire = &Wire, uint8_t address = 0x00);
 
   /**
    * @brief Initialize the function
@@ -84,15 +84,15 @@ public:
    * @brief 获取单次测量的传感器数据
    * @return 结构体类型的数据
    */
-  sLwps_t getData(void);
+  sLwlp_t getData(void);
   /**
    * @brief 滤波处理函数,获取滤波处理的传感器数据
    * @return 结构体类型的数据
    */
-  sLwps_t getfilterData(void);
+  sLwlp_t getfilterData(void);
   
 private:
-  sLwps_t  lwps;
+  sLwlp_t  lwlp;
   TwoWire *_pWire;
   uint8_t _address;
   void configChip(void);//配置芯片

@@ -1,5 +1,6 @@
-# DFRobot_SHT3x
-这是一款高灵敏、高稳定性的压差传感器，测量压差范围±500pa
+# DFRobot_LWLP
+这是一款高精度差压传感器（测量两个气管之间的差值），将高性能 MEMS 压力敏感芯片和专用调理芯片封装在双气嘴的管壳内，两个气路结构中压力互为参考，降低环境对输出的影响。采用独有算法实现对传感器进行多阶温度补偿，并以数字 I2C 的形式输出。
+注意：为了保准测量精度和传感器的寿命，请尽量在洁净气体中使用。传感器气嘴中不能进水，否则会造成传感器损坏
 
 ![SVG Figure](https://github.com/ouki-wang/DFRobot_Sensor/raw/master/resources/images/SEN0245svg1.png)
 
