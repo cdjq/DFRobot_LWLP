@@ -13,9 +13,8 @@
 
 #include "DFRobot_LWLP.h"
 
-DFRobot_LWLP::DFRobot_LWLP(TwoWire *pWire, uint8_t address)
+DFRobot_LWLP::DFRobot_LWLP(TwoWire *pWire)
 {
-  _address = address;
   _pWire = pWire;
   
 }

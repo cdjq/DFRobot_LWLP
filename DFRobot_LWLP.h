@@ -71,9 +71,8 @@ public:
   /*!
    * @brief Construct the function
    * @param pWire IC bus pointer object and construction device, can both pass or not pass parameters, Wire in default.
-   * @param address Chip IIC address, two optional addresses 0x01 and 0x00(0x00 in default).
    */
-  DFRobot_LWLP(TwoWire *pWire = &Wire, uint8_t address = 0x00);
+  DFRobot_LWLP(TwoWire *pWire = &Wire);
 
   /**
    * @brief Initialize the function
@@ -94,7 +93,7 @@ public:
 private:
   sLwlp_t  lwlp;
   TwoWire *_pWire;
-  uint8_t _address;
+  uint8_t _address = 0x00;
   void configChip(void);//配置芯片
   /**
    * @brief Transport data to chip
