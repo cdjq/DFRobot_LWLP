@@ -29,11 +29,11 @@
 
 
 #define SENSOR_TYPE    LWPX  //Sensor type 
-#define MAX_PRESURE   600 //Maximum pressure range(Pa)
-#define MIN_PRESURE    600 //Minimum pressure range(Pa)
+#define MAX_PRESURE   600 //Maximum value of pressure range(Pa)
+#define MIN_PRESURE    600 //Minimum value of pressure range(Pa)
 
-#define MAX_TEMP    85.0 //Highest temperature range(℃)
-#define MIN_TEMP     40.0 //Lowest temperature range(℃)
+#define MAX_TEMP    85.0 //Highest value of temperature range(℃)
+#define MIN_TEMP     40.0 //Lowest value of temperature range(℃)
 
 
 
