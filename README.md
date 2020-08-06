@@ -1,6 +1,7 @@
 # DFRobot_LWLP
-这是一款高精度差压传感器（测量两个气管之间的差值），将高性能 MEMS 压力敏感芯片和专用调理芯片封装在双气嘴的管壳内，两个气路结构中压力互为参考，降低环境对输出的影响。采用独有算法实现对传感器进行多阶温度补偿，并以数字 I2C 的形式输出。
-注意：为了保准测量精度和传感器的寿命，请尽量在洁净气体中使用。传感器气嘴中不能进水，否则会造成传感器损坏
+This high-resolution differential pressure sensor with I2C communication is used to measure the difference in pressure across two points on a device. A high-performance MEMS pressure chip and a special conditioning chip are encapsulated inside the sensor. It will give you a comparative measurement between two points. Besides, the sensor IC adopts a unique multi-stage temperature-compensation algorithm to reduce the effect of environment on the output. <br>
+
+**NOTE**: In order to ensure the measurement resolution and the sensor life, please use the sensor in the clean air. Do not let water enter the nozzle of the sensor, or it will cause damage to the sensor.
 
 ## Table of Contents
 
@@ -13,7 +14,7 @@
 
 ## Summary
 
-   1.读取温度传感器的压差和温度值<br>
+   1.Read the pressure difference and temperature value of the differential pressure sensor <br>
    
 ## Installation
 To use this library, please download the library file first, and paste it into the \Arduino\libraries directory, then open the examples folder and run the demo in the folder.
@@ -33,13 +34,13 @@ To use this library, please download the library file first, and paste it into t
    */
   int begin();
   /**
-   * @brief 获取单次测量的传感器数据
-   * @return 结构体类型的数据
+   * @brief Get sensor data of single measurement 
+   * @return Data of struct type 
    */
   sLwlp_t getData(void);
   /**
-   * @brief 滤波处理函数,获取滤波处理的传感器数据
-   * @return 结构体类型的数据
+   * @brief Filter processing function, get sensor data processed by this function 
+   * @return Data of struct type
    */
   sLwlp_t getfilterData(void);
 
